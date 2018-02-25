@@ -1,0 +1,48 @@
+{
+  "name": "pinetree",
+  "version": "1.0.0",
+  "description": "pinetree",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zplanet/pinetree"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "test": "jest --u --no-watchman"
+  },
+  "author": "Jong Hoon Kim",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "immer",
+    "flux",
+    "state",
+    "store",
+    "redux",
+    "react-redux"
+  ],
+  "jest": {
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
+  },
+  "dependencies": {
+    "immer": "^1.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.0.5",
+    "jsdom": "^11.5.1",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^3.10.0"
+  }
+}
