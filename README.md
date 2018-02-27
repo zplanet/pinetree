@@ -51,7 +51,7 @@ class App extends Component {
                 </div>
                 <ul>
                 {
-                    todos.map((t,i) => <li key={i}>{t} <button type='' onClick={() => removeTodo(t)}>remove</button></li>)
+                    todos.map((t,i) => <li key={i}>{t} <button type='button' onClick={() => removeTodo(t)}>remove</button></li>)
                 }
                 </ul>
             </div>
