@@ -85,4 +85,74 @@ export default connect(
 )(App)
 ```
 
-Please, refer the sample project [here](https://github.com/zplanet/pinetree-sample).
+## Example
+
+[Sample Project](https://github.com/zplanet/pinetree-sample).
+
+## API Reference
+
+init(fn: state => void) : Initialize store state
+
+```
+import { init } from 'pinetree'
+
+init(state => {
+    state.<state variable> = <initial value>
+})
+```
+
+mutate(fn: state => void) : Mutate store state
+
+```
+import { mutate } from 'pinetree'
+
+mutate(state => {
+    state.<state variable> = <value>
+})
+```
+
+getState() : Return current state
+
+```
+import { getState } from 'pinetree'
+
+const currentState = getState()
+```
+
+subscribe(fn: state => void) : Set callback function to listen state change
+
+```
+import { subscribe } from 'pinetree'
+
+const unsubscribe = subscribe(state => {
+    ...
+})
+
+...
+
+unsubscribe() // unsubscribe the subscription
+```
+
+connect(filter: state => {}, mutator: mutate => {})(component: React.Component) : Connect Pinetree store to React component
+
+```
+import React, { Component } from 'react'
+import { connect } from 'pinetree'
+
+class MyComponent extends Component {
+    ...
+}
+
+export connect(
+    state => {
+    	return {
+            ...
+        }
+    },
+    mutate => {
+        return {
+            ....
+        }
+    }
+)(MyComponent)
+```
